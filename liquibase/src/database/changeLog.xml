@@ -10,4 +10,7 @@
     <changeSet id="1" author="rahul">
        <sqlFile dbms = "mysql" path ="scripts/baseline.sql" endDelimiter = ";" />
     </changeSet>
+    <changeSet id="2" author="rahul">
+        <sqlFile dbms = "mysql" path ="scripts/first_change.sql" endDelimiter = ";" />
+    </changeSet>
 </databaseChangeLog>
