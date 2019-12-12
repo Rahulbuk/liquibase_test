@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <databaseChangeLog
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -9,6 +8,6 @@
 
 
     <changeSet id="1" author="rahul">
-       <sqlFile dbms = "mysql" path ="script/baseline.sql" endDelimiter = ";" />
+       <sqlFile dbms = "mysql" path ="scripts/baseline.sql" endDelimiter = ";" />
     </changeSet>
 </databaseChangeLog>
