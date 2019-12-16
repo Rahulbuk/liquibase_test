@@ -1,4 +1,4 @@
-CREATE TABLE db.Table_2 (
+CREATE TABLE Table_2 (
 	Column1 varchar(100) NULL,
 	Column2 varchar(100) NULL
 )
