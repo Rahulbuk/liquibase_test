@@ -7,7 +7,11 @@ agent any
     environment {
         db_url = 'jdbc:mysql://localhost:3306/db'
     }
-    stages{
+    parameters {
+        string(name: 'VERSION', defaultValue: '', description: 'Version To Build the Project')
+    }
+
+        stages{
           stage('maven-build') {
               steps{
                  dir('liquibase') {
