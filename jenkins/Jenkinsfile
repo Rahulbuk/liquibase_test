@@ -8,13 +8,14 @@ agent any
         db_url = 'jdbc:mysql://localhost:3306/db'
     }
     parameters {
-        string(name: 'VERSION', defaultValue: '', description: 'Version To Build the Project')
+        string(name: 'VERSION', defaultValue: 'DefaultVersion', description: 'Version To Build the Project')
     }
 
         stages{
           stage('maven-build') {
               steps{
                  dir('liquibase') {
+                     echo "Building version ${params.VERSION}";
                        sh 'mvn clean compile'
                  }
               }
