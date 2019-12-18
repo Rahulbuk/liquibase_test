@@ -15,14 +15,21 @@ agent any
           stage('maven-build') {
               steps{
                  dir('liquibase') {
-                       sh 'mvn clean install'
+                       sh 'mvn clean compile'
                  }
               }
           }
         stage('unit-test') {
             steps{
                 dir('liquibase') {
-                    sh 'mvn clean test'
+                    sh 'mvn test'
+                }
+            }
+        }
+        stage('install-locally') {
+            steps{
+                dir('liquibase') {
+                    sh 'mvn install -DskipTests=true'
                 }
             }
         }
